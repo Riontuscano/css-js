@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Number</title>
+</head>
+<body>
+
+    To print Even Number click here:  <br>
+    <input type="text" name="range" id="r"><br><br>
+    <button onclick="printprime()">Start</button>
+    <button type="reset">Reset</button>
+    <script>
+    
+        function printprime() {
+            var s=document.getElementById("r").value
+            var flag=0
+            // document.write(s)
+            var m=Math.floor(s/2);
+            // document.write(m)
+            for(var i=2;i<m;i++)
+            {
+                if(s%i==0){
+                    document.write("Its not a prime number")
+                    flag=1;
+                    break; 
+                }
+                    
+                
+        }
+        if(flag==0)
+        document.write("Its a prime number")
+    }
+    </script>
+    
+</body>
+</html>

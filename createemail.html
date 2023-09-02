@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Email</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="fn">Enter Your First name</label><br>
+        <input type="text" name="sname" id="fn"><br><br>
+        <label for="ln">Enter your Surname</label><br>
+        <input type="text" name="lname" id="ln"><br><br>
+        <button type="submit" id="btn">Create</button>
+
+        <p id="email"></p>
+    </form>
+    <script>
+        var sbtn=document.getElementById("btn")
+        sbtn.addEventListener("click",create(),false)
+
+        function create() {
+            fname=document.getElementById("fn")
+            lname=document.getElementById("ln")
+
+            for(var i=0;i<2;++i) {
+                document.getElementsByTagName("label")[i].style.color="red"
+            }
+
+            fname.disabled=true
+            lname.disabled=true
+
+            a=fname.value
+            b=lname.value
+            // document.write(a)
+            // document.getElementById("email").innerHTML=a.toLowerCase()+b.toLowerCase()+"@msbte.com"
+            }
+    </script>
+</body>
+</html>

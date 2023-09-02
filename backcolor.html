@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set Background Color</title>
+    <script>
+        // Function to change the background color
+        function changeBackgroundColor() {
+            // Prompt the user for a color name
+            var colorName = prompt("Enter a color name (e.g., red, blue, green):");
+            
+            // Check if a color name was provided
+            if (colorName !== null && colorName !== "") {
+
+                // Set the background color of the body element
+                document.body.style.backgroundColor = colorName.toLowerCase();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Set Background Color</h1>
+    <button onclick="changeBackgroundColor()">Set Background Color</button>
+</body>
+</html>

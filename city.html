@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City</title>
+</head>
+<body>
+    <label for="imageSelector">Select an Image:</label><br>
+    <select id="imageSelector">
+        <option value="1">Mumbai</option>
+        <option value="2">Delhi</option>
+        <option value="3">Goa</option>
+    </select><br><br>
+    <button id="showImageButton" onclick="display()">Show Image</button>
+
+    <script>
+    function display(){
+    x=parseInt(document.getElementById("imageSelector").value);
+    // document.write(x)
+
+    switch(x){
+        case 1:document.write("Hello!!!!! Welcome To Mumbai meri Jaan<br><br>")
+                document.write('<img src="https://www.wadhwaniserviceapartments.com/blog/wp-content/uploads/2020/05/mumbai-2-1536x828.jpg " width="800px">')
+            break;
+        case 2:document.write("Hello!!!!! Welcome To Delhi meri Jaan")
+            break;
+        case 3:document.write("Hello!!!!! Welcome To Goa meri Jaan")
+            break;
+            }   
+}
+
+    </script>
+</body>
+</html>

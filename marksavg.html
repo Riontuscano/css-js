@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Enter Your Name:</label><br>
+        <input type="text" name="fullname" id="name"><br> <br>
+        <label for="mrk">Enter Your Marks:</label><br>
+        <input type="number" name="mark" id="mrk"><br><br>
+        <button  onclick="show()">Show Grade</button><br><br><br>
+
+        <label for="message">Your Grade</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" readonly></textarea>
+
+        <script>
+            function show(){
+            var text;
+         x=docuent.getElementById("mrk").value
+         docuent.write(x)
+        // if(x>100 || x<0){
+        //     alert("Enter Valid Marks");
+        // }
+        if(x<100 && x>85)
+            text="Grade A"
+        else if(x<85 && x>70)
+            text="Grade B"
+        else if(x<70 && x>60)
+            text="Grade C"
+        else if(x<60 && x>50)
+            text="Grade D"
+        else if(x<50 && x>40)
+            text="Grade E"
+        else 
+            text="FAIL"
+            alert(text)
+        document.getElementById("Message").value =text;
+    }
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+</head>
+<body>
+    <h1>College Admission Form</h1>
+    <form id="admissionForm"  onsubmit="return validateForm()" >
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ><br><br>
+
+        <label for="last">Surname:</label>
+        <input type="text" id="last" name="last" ><br><br>
+
+      
+        <label for="message">Your Email for diploma</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" readonly></textarea><br><br>
+
+        <input type="submit"  value="Submit">
+    </form>
+
+    <script>
+        function disabled1() {
+            document.getElementById("name").disabled =true;
+            document.getElementById("last").disabled =true;
+            document.getElementById("name").style.backgroundColor = "red";
+            document.getElementById("last").style.backgroundColor = "red";
+
+            fname=document.getElementById("name").value
+            lname=document.getElementById("last").value
+            email=fname+lname+"@msbte.com";
+            document.getElementById("message").value=email;
+
+        }
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("last").value;
+
+            if (name === "" || email === "" ) {
+                alert("Please fill in all required fields.");
+                // return false; 
+            }
+            alert("Form submitted successfully!");
+            disabled1();
+            // return true;
+        }
+    </script>
+</body>
+</html>

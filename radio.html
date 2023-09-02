@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits and Vegetables</title>
+</head>
+<body>
+    <h1>Select Fruits or Vegetables</h1>
+    
+    <input type="radio" name="foodType" id="fruitsRadio" value="fruits" onchange="populateOptions()">
+    <label for="fruitsRadio">Fruits</label>
+
+    <input type="radio" name="foodType" id="vegetablesRadio" value="vegetables" onchange="populateOptions()">
+    <label for="vegetablesRadio">Vegetables</label>
+
+    <select id="foodOptions">
+        <!-- Options will be populated dynamically -->
+    </select>
+
+    <script>
+        function populateOptions() {
+            const fruits = ["Apple", "Banana", "Orange", "Grapes"];
+            const vegetables = ["Carrot", "Broccoli", "Tomato", "Cucumber"];
+
+            const selectedOption = document.querySelector('input[name="foodType"]:checked').value;
+            const foodOptions = document.getElementById("foodOptions");
+
+            // Clear existing options
+            foodOptions.innerHTML = '';
+
+            // Populate options based on the selected radio button
+            const optionsToDisplay = selectedOption === "fruits" ? fruits : vegetables;
+
+                optionsToDisplay.forEach(optionText => {
+                    const option = document.createElement("option");
+                    option.value = optionText;
+                    option.textContent = optionText;
+                    foodOptions.appendChild(option);
+                });
+        }
+
+        // Initially, call the function to set the default options
+        populateOptions();
+    </script>
+</body>
+</html>

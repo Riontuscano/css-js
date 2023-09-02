@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logical Operators Example</title>
+</head>
+<body>
+  <button onclick="logicalOperators()">Run Logical Operators</button>
+
+  <script>
+    function logicalOperators() {
+      var x = 5;
+      var y = 10;
+      var z = 15;
+      
+      // Logical AND operator (&&)
+      var resultAnd = (x < y) && (y < z);
+      document.write("Logical AND: " + resultAnd); // true
+      
+      // Logical OR operator (||)
+      var resultOr = (x > y) || (y < z);
+      document.write("Logical OR: " + resultOr); // true
+      
+      // Logical NOT operator (!)
+      var resultNot = !(x > y);
+      document.write("Logical NOT: " + resultNot); // true
+    }
+  </script>
+</body>
+</html>

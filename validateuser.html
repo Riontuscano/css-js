@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate User</title>
+</head>
+<body>
+    <label for="u">Enter Your Username:</label><br>
+    <input type="text" name="uname" id="u"><br><br>
+    <label for="u">Enter Your Password:</label><br>
+    <input type="password" name="pname" id="p"><br><br>
+    <button onclick="validate()">Verify</button>
+    <script>
+        function validate(){
+            var name=document.getElementById("u").value;
+            var password=parseInt(document.getElementById("p").value);
+            var msg="Login Successfully"
+            switch(name){
+                case "Rion":if(password==1317)
+                            break;
+                case "Rajesh":if(password==1111)
+                            break;
+                case "Susheela":if(password==107)
+                            break;
+                case "Shan":if(password==1711)
+                            break;
+                case "Elon":if(password==Hello)
+                            break;
+                default:msg="Invalid Password or Name"
+                        
+            }
+            alert(msg)
+
+        }   
+    </script>
+</body>
+</html>
