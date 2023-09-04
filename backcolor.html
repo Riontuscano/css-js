@@ -3,22 +3,24 @@
 <head>
     <title>Set Background Color</title>
     <script>
-        // Function to change the background color
-        function changeBackgroundColor() {
-            // Prompt the user for a color name
-            var colorName = prompt("Enter a color name (e.g., red, blue, green):");
-            
-            // Check if a color name was provided
-            if (colorName !== null && colorName !== "") {
+       function setbackgroundcolor(){
+        var color=prompt("Enter Color name to Set Background Color");  
+        if(color!=null || color!=""){
+        document.body.style.backgroundColor=color.toLocaleLowerCase();
+       }
+       }
+        // function changeBackgroundColor() {   
+        //     var colorName = prompt("Enter a color name (e.g., red, blue, green):");
+    
+        //     if (colorName !== null && colorName !== "") {
 
-                // Set the background color of the body element
-                document.body.style.backgroundColor = colorName.toLowerCase();
-            }
-        }
+        //         document.body.style.backgroundColor = colorName.toLowerCase();
+        //     }
+        // }
     </script>
 </head>
 <body>
     <h1>Set Background Color</h1>
-    <button onclick="changeBackgroundColor()">Set Background Color</button>
+    <button onclick="setbackgroundcolor()">Set Background Color</button>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+        var t1=0;
+        var t2=1;
+        var len=parseInt(prompt("Enter max length of fibonacci sequence"))
+        document.write("Fibonacci include<br>")
+        document.write(" "+t1+" "+t2)
+        for(i=0;i<len;i++){
+            t3=t1+t2     
+            document.write(" "+t3)   
+            t1=t2
+            t2=t3
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person={Name:"Rion" ,
+                    Age:"18",
+                    Eyecolor:"Brown"};
+        for(let x in person){
+            document.write(x+":"+person[x]+"<br/>");
+        }
+        delete person.Eyecolor;
+
+        for(let l in person){
+            document.write(l+":"+person[l]+"<br/>");
+        }
+
+
+    </script>
+</body>
+</html>

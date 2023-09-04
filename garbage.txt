@@ -1,0 +1,19 @@
+ for(var i=0;i<arr.length;i++){
+            for(var j=i+1;j<arr.length;i++){
+                if(arr[i]==arr[j]){
+                    z=0
+                    c=0
+                    do{
+                        if(arr[i]==arr1[z]){
+                            c=1;
+                        }
+                        z++;
+                    }while(z<arr1.length)
+
+                    if(c!=1){
+                        count++;
+                        arr1.push(arr[i]);
+                    }
+                }
+            }
+        }

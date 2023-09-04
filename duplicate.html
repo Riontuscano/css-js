@@ -11,25 +11,26 @@
        var arr1=new Array();
         var arr=[20,20,20,10,10,10,10,10,10,10,40,40,40,40,40,30,30,30];
 
-        for(var i=0;i<arr.length;i++){
-            for(var j=i+1;j<arr.length;i++){
-                if(arr[j]==arr[j]){
-                    z=0
-                    c=0
-                    do{
-                        if(arr[i]==arr1[z]){
-                            c=1;
-                        }
-                        z++;
-                    }while(z<arr1.length)
-
-                    if(c!=1){
-                        count++;
-                        arr1.push(arr[i]);
-                    }
+       for(var i=0;i<arr.length;i++){
+        for(var j=0;j<arr.length;j++){
+            if(arr[i]==arr[j]){
+                z=0
+                c=0
+                do{
+                if(arr[i]==arr1[z]){
+                    c=1
                 }
+                z++;
+            }while(z<arr1.length)
+            }
+            if(c!=1){
+                count++;
+                arr1.push(arr[i]);
             }
         }
+       }
+
+
         document.write("There are " + count+ "duplicate elements in Array<br>");
         for(var i=0;i<arr1.length;i++){
 

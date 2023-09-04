@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="Hello ! How are you!!"
+        var str=str.split(" ")
+        // document.write(str)
+        var str2=prompt("Enter a string you want to enter")
+        var pos=prompt("Enter the position",1)
+
+        str.splice(pos,0,str2)
+        for(var i=0;i<str.length;i++){
+            document.write(str[i]+" ")
+        }
+    </script>
+</body>
+</html>

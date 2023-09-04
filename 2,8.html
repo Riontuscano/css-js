@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veggie and Fruits</title>
+</head>
+<body>
+    Fruit:<input type="radio" name="grp" id="fruits" onclick="sort()"><br>
+    Veggie:<input type="radio" name="grp" id="Veggie" onclick="sort()">
+    <select name="sort" id="list">
+
+    </select>
+    <script>
+        function sort() {
+            if(document.getElementById("fruits").checked){
+                temp="<option>Apple</option><br>"+"<option>Banana</option<br>"+"<option>Orange</option<br>"+"<option>strawberry</option<br>";
+                }
+            if(document.getElementById("Veggie").checked){
+                temp="<option>Tomato</option<br>"+"<option>Patato</option<br>"+"<option>Carrot</option<br>"+"<option>Onion</option<br>";      
+            }
+            document.getElementById("list").innerHTML=temp;
+        
+        }
+    </script>
+</body>
+</html>

@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>College Admission Form</h1>
-    <form id="admissionForm"  onsubmit="return validateForm()" >
+    <form id="admissionForm"  > 
+        <!-- onsubmit="return validateForm()"  -->
         
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" ><br><br>
@@ -17,24 +18,29 @@
 
       
         <label for="message">Your Email for diploma</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" readonly></textarea><br><br>
-
-        <input type="submit"  value="Submit">
+       <p id="message"></p>
+       <br><br> <input type="submit" onclick="disabled1()"  value="Submit">
     </form>
 
     <script>
         function disabled1() {
-            document.getElementById("name").disabled =true;
-            document.getElementById("last").disabled =true;
-            document.getElementById("name").style.backgroundColor = "red";
-            document.getElementById("last").style.backgroundColor = "red";
+          
 
-            fname=document.getElementById("name").value
-            lname=document.getElementById("last").value
-            email=fname+lname+"@msbte.com";
-            document.getElementById("message").value=email;
+            fname=document.getElementById("name")
+            lname=document.getElementById("last")
+            // document.getElementById("message").value=email;
 
+            fname.disabled =true;
+            lname.disabled =true;
+            document.getElementsByTagName("label")[0].style.backgroundColor = "red";
+            document.getElementsByTagName("label")[1].style.backgroundColor = "red";
+
+            a=fname.value
+            b=lname.value
+
+            document.getElementById("message").innerHTML=a.toLowerCase()+b.toLowerCase()+"@msbte.com";
         }
+            
         function validateForm() {
             const name = document.getElementById("name").value;
             const email = document.getElementById("last").value;
