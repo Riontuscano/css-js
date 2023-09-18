@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arithmetic operation</title>
+</head>
+<body>
+    <form action="" method="get" name="myform">
+    <label for="first">Enter First value</label><br>
+    <input type="number" name="first" id="f"><br><br> 
+    <label for="sec">Enter Second value</label><br>
+    <input type="number" name="sec" id="s"><br><br>
+    <label for="ans">Answers</label><br>
+    <input type="number" name="ans" id="a" readonly><br><br>
+
+    <button onclick="add()">Addition</button>
+    <button onclick="sub()">Subtraction</button><br> <br>
+    <button onclick="multi()">Multiplication</button>
+    <button onclick="div()">Division</button>
+
+    </form> 
+    <script>
+        function add(){
+            var a=parseInt(document.getElementById("f").value);
+            var b=parseInt(document.getElementById("s").value);
+            c=a+b;
+            document.getElementById("a").value=c;
+        }
+        function sub(){
+            var a=parseInt(document.getElementById("f").value);
+            var b=parseInt(document.getElementById("s").value);
+            c=a-b;
+            document.getElementById("a").value=c;
+        }
+        function multi(){
+            var a=parseInt(document.getElementById("f").value);
+            var b=parseInt(document.getElementById("s").value);
+            c=a*b;
+            document.getElementById("a").value=c;
+        }
+        function div(){
+            var a=parseInt(document.getElementById("f").value);
+            var b=parseInt(document.getElementById("s").value);
+            c=a/b;
+            document.getElementById("a").value=c;
+        }
+    </script>
+</body>
+</html>

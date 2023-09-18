@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter</title>
+</head>
+<body>
+    <script>
+        var student={
+            firstname:" ",
+            secondname:" ",
+        
+        get fullname(){
+            return this.firstname + " " + this.lastname
+        },
+        set fullname(sname){
+            this.firstname = sname.split(" ")[0];
+            this.lastname = sname.split(" ")[1];
+        }
+    }
+    student.fullname = "Rion Tuscano"
+    document.write(student.fullname )
+    </script>
+</body>
+</html>
