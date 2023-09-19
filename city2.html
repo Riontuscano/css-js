@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City 2</title>
+    <script>
+        function displayme(choice){
+            var img1=document.getElementById("img1");
+            var p1=document.getElementById("p1");
+            var ch=choice.options[choice.selectedIndex].value;
+            // document.write(ch)
+            // img1.src=ch+".jpg"
+
+            if(choice.selectedIndex==0){
+                p1.style.display="block";
+                p2.style.display="none";
+                p3.style.display="none";
+            }
+            if(choice.selectedIndex==1){
+                p1.style.display="none";
+                p2.style.display="block";
+                p3.style.display="none";
+            }
+            if(choice.selectedIndex==2){
+                p1.style.display="none";
+                p2.style.display="none";
+                p3.style.display="block";
+            }
+        }
+
+        function displayblock(){
+                p1.style.display="block";
+                p2.style.display="none";
+                p3.style.display="none";
+        }
+    </script>
+</head>
+<body onload="displayblock()">
+    <form action="">
+        <label for="imageSelector">Select an Image:</label><br>
+        <select id="imageSelector" onchange="displayme(this)">
+            <option value="mumbai">Mumbai</option>
+            <option value="delhi">Delhi</option>
+            <option value="goa">Goa</option>
+            <img src="mumbai.jpg" width="800px" id="img1">
+        </select><br><br>
+        <p id="p1">Hello Mumbai</p>
+        <p id="p2">Hello Delhi</p>
+        <p id="p3">Hello Goa</p>
+        <!-- <button id="showImageButton" onclick="display()">Show Image</button> -->
+    </form>
+    
+</body>
+</html>
