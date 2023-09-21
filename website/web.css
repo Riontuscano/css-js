@@ -1,0 +1,41 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Alegreya+Sans+SC:wght@300&family=Zilla+Slab:wght@300&display=swap');
+*{
+    /* background-color: black; */
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Zilla Slab', serif;
+}
+
+nav{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+}
+ul li{
+    /* align-items: self-end; */
+    padding: 0 ,0,13px;
+}
+main{
+    min-height: 90vh;
+    ;
+}
+@media only screen and  (max-width:600px){
+    body{
+        background-color:white !important;  
+    }
+    .container{
+        font-size:12px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    
+}
+    
+
+
