@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+</head>
+<body>
+   <script>
+    function over(e){
+        document.frm.i1.value=e
+    }
+   </script>
+   <p id="ex"></p>
+   <form action="" name="frm">
+    <input type="button" name="i1" id="i" value="submit" onmouseover="over(this.name)">
+   </form>
+</body>
+</html>
