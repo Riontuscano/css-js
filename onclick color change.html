@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>click on the dropddown list and see the magic </h1>
+    <label for="color">Select the Color </label>
+    <select name="color1" id="1" onchange="col()">
+        <option value="Red" >Red</option>
+        <option value="Green" >Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Yellow" >Yellow</option>
+        <option value="cyan" >cyan</option>
+        <option value="purple" >purple</option>
+    </select>
+    <script>
+        function col()
+        {
+         
+            var col1 = document.getElementById("1").value
+            //color = col1.value
+            document.body.style.backgroundColor=col1
+
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
