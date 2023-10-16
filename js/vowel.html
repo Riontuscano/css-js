@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(str){
+            var count=str.match(/[aeiou]/gi).length;
+            return count
+        }
+
+        var string=prompt("Enter a string")
+        var result=check(string);
+        document.write("No of vowel characters:"+result)
+    </script>
+</body>
+</html>

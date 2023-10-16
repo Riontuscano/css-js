@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Window Contents</title>
+</head>
+<body>
+    <h1>Current Window Contents</h1>
+    <p>This is the original content of the window.</p>
+    <button onclick="changeContents()">Change Contents</button>
+
+    <script>
+        // Function to change the contents of the window
+        function changeContents() {
+            // Get a reference to the current window's document
+            const windowDocument = window.document;
+
+            // Find an element by its ID or other selectors
+            const contentElement = windowDocument.querySelector('p');
+
+            // Change the content of the element
+            contentElement.textContent = "This is the updated content of the window.";
+
+            // You can also create new elements and add them to the document
+            // Example: Add a new paragraph element
+            const newParagraph = windowDocument.createElement('p');
+            newParagraph.textContent = "This is a new paragraph added to the window.";
+            windowDocument.body.appendChild(newParagraph);
+        }
+    </script>
+</body>
+</html>

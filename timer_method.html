@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer using setTimeout</title>
+</head>
+<body>
+    <h1>Timer</h1>
+    <p id="timer">00:00:00</p>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <script>
+        let timerTimeout;
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        function startTimer() {
+            if (!timerTimeout) {
+                timerTimeout = setTimeout(updateTimer, 1000);
+            }
+        }
+
+        function stopTimer() {
+            clearTimeout(timerTimeout);
+            timerTimeout = null;
+        }
+
+        function resetTimer() {
+            stopTimer();
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            document.getElementById("timer").innerText = "00:00:00";
+        }
+
+        function updateTimer() {
+            seconds++;
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes === 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+
+            const formattedTime = pad(hours)+":" + pad(minutes)+":" + pad(seconds)
+            document.getElementById("timer").innerText = formattedTime;
+
+            timerTimeout = setTimeout(updateTimer, 1000);
+        }
+
+        function pad(value) {
+            return value < 10 ? "0" + value : value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Cookie Example</title>
+</head>
+<body>
+    <p>A session cookie, also known as a session identifier or session token, is a type of cookie used in web applications to temporarily store and manage information about a user's session. Session cookies are temporary and are typically deleted once the user's browsing session ends, such as when they close their web browser.</p>
+    <button onclick="setSessionCookie()">Set Session Cookie</button>
+    <button onclick="getSessionCookie()">Get Session Cookie</button>
+    <button onclick="deleteSessionCookie()">Delete Session Cookie</button>
+
+    <script>
+        // Function to set a session cookie
+        function setSessionCookie() {
+            document.cookie = "sessionCookie=This is a session cookie; path=/";
+            alert("Session cookie has been set.");
+        }
+
+        // Function to get a session cookie
+        function getSessionCookie() {
+            const cookies = document.cookie.split(';');
+            for (const cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === "sessionCookie") {
+                    alert("Session Cookie Value: " + value);
+                    return;
+                }
+            }
+            alert("Session cookie not found.");
+        }
+
+        // Function to delete a session cookie
+        function deleteSessionCookie() {
+            document.cookie = "sessionCookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            alert("Session cookie has been deleted.");
+        }
+    </script>
+</body>
+</html>
