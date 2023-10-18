@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window with Frames</title>
+</head>
+<body>
+    <button onclick="openNewWindow()">Open New Window</button>
+
+    <script>
+        let childWindow;
+
+        function openNewWindow() {
+            // Open a new window with two frames
+            childWindow = window.open("", "ChildWindow", "width=600,height=400");
+            childWindow.document.write('<html><head><title>Child Window</title></head><frameset rows="50%,50%"><frame name="frame1" src="frame1.html"><frame name="frame2" src="frame2.html"></frameset></html>');
+            childWindow.document.close();
+        }
+    </script>
+</body>
+</html>

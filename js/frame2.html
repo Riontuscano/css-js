@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frame 2</title>
+</head>
+<body>
+    
+   <button name="1" onclick="loadsite(this.name)">Flower</button>
+   <button name="2" onclick="loadsite(this.name)">Fruits</button>
+   <button name="3" onclick="loadsite(this.name)">Cities</button>
+   <script>
+    function loadsite(value){
+        // console.log(value);
+        // var data = parseInt(value);
+        if(value==1){
+            window.parent.frames["frame3"].location.href = "flower.html";
+        }
+        if(value==2){
+            window.parent.frames["frame3"].location.href = "fruits.html";
+        }
+        if(value==3){
+            window.parent.frames["frame3"].location.href = "cities.html";
+        }
+
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .image-container {
+            display: flex;
+           
+        }
+        .image-container img {
+            width: 200px;
+            height: 150px;
+            transition: transform 0.3s; padding-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="image1.jpg" alt="Image 1" onmouseover="rollover(this)" onmouseout="rollout(this)">
+        <img src="image2.jpg" alt="Image 2" onmouseover="rollover(this)" onmouseout="rollout(this)">
+        <img src="image3.jpg" alt="Image 3" onmouseover="rollover(this)" onmouseout="rollout(this)">
+    </div>
+
+    <script>
+        function rollover(image) {
+            image.style.transform = "scale(1.1)";
+        }
+
+        function rollout(image) {
+            image.style.transform = "scale(1)";
+        }
+    </script>
+</body>
+</html>

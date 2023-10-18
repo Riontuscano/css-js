@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .scroll-container {
+        position: relative;
+        overflow: hidden;
+        background-color: #333;
+        color: #fff;
+    }
+    
+    .scroll-text {
+        white-space: nowrap;
+        animation: scroll 20s linear infinite;
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    
+        
+    </style>
+    <link rel="stylesheet" type="text/css" href="scrolling-text.css">
+</head>
+<body>
+    <div class="scrolling-text-container">
+        <div class="scrolling-text">
+            <span>This is a scrolling text in the viewport. It's not on the status bar.</span>
+        </div>
+    </div>
+    <script src="scrolling-text.js"></script>
+</body>
+</html>
