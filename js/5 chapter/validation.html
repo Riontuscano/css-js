@@ -27,7 +27,7 @@
 
             // Email Validation using regex
             const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}$/;
-            if (!email.match(emailRegex)) {
+            if (!emailRegex.test(email)) {
                 alert("Invalid email address.");
                 return;
             }

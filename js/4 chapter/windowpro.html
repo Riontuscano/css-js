@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This JavaScript code fetches the properties and their values from the window object and then displays them in the web page using the document.write method. Let's break down the code step by step:
+
+        script: This HTML element is used to embed JavaScript code within an HTML document. The code within the script tags will be executed in the browser.
+        
+        const win = window;: This line assigns the window object to a variable called win. The window object represents the global object in a web browser and provides access to various properties and methods related to the browser's window or tab.
+        
+        const propertyNames = Object.getOwnPropertyNames(win);: Here, the code uses the Object.getOwnPropertyNames method to retrieve an array of property names from the window object (win). This method returns an array of all enumerable properties of the specified object.
+        In the loop, each propertyName is processed, and the corresponding propertyValue is obtained by accessing the property using bracket notation (win[propertyName]).
+
+        The code uses document.write to display the property name and its value within the web page. It does so by creating an HTML string that includes the property name and value.
+        
+        The break tag is used to add a line break between each property-value pair, making the output more readable.
+        
+        The result is that the code retrieves and displays a list of property names and their values associated with the window object. This can include a wide range of properties related to the browser, DOM (Document Object Model), and more. When you run this code, you will see an output on your web page showing these properties and values.</p>
+    <script>// Get a reference to the 'window' object
+        const win = window;
+        
+        // Get an array of property names from the 'window' object
+        const propertyNames = Object.getOwnPropertyNames(win);
+        
+        // Display the property names and their values
+        for (const propertyName of propertyNames) {
+            const propertyValue = win[propertyName];
+            document.write(`Property: ${propertyName} - Value: ${propertyValue}`+"<br/>");
+        }
+        </script>
+</body>
+</html>

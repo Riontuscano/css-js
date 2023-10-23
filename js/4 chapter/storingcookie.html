@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login Form</title>
 </head>
+
 <body>
     <h1>Login Form</h1>
     <form id="loginForm" onsubmit="setPasswordAsCookie(); return false;">
@@ -23,11 +25,16 @@
             // Store the password as a cookie with a 7-day expiration (you can adjust the expiration time)
             const expirationDate = new Date();
             expirationDate.setDate(expirationDate.getDate() + 7);
+            setcookie(password, password, expirationDate);
+            setcookie(username, username, expirationDate);
 
-            document.cookie = `password=${password}; expires=${expirationDate.toUTCString()}`;
+            function setcookie(name, value, expirationDate) {
+                document.cookie = `${name}=${value};expires=${expirationDate.toUTCString()}`;
+            }
 
             alert("Password has been saved as a cookie. You can now use it for authentication.");
         }
     </script>
 </body>
+
 </html>
