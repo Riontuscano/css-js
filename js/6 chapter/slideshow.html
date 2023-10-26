@@ -39,13 +39,10 @@
         demoimg= document.getElementById("img");
         function showSlide(status) {
             count = count + status;
-            if (count > pics.length - 1) {
+            if (count > pics.length - 1) 
                 count = 0;
-            }
-            if (count < 0) {
+            if (count < 0) 
                 count = pics.length - 1;
-            }
-            // console.log(count);
            demoimg.setAttribute("src", pics[count]);
         }
     </script>

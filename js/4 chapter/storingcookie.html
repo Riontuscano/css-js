@@ -6,15 +6,17 @@
 </head>
 
 <body>
+    In JavaScript, cookies are small pieces of data that a web server sends to a user's web browser, which the browser then stores locally. Cookies are often used for various purposes, such as storing user preferences, session management, and tracking user activity on a website.
     <h1>Login Form</h1>
     <form id="loginForm" onsubmit="setPasswordAsCookie(); return false;">
-        <label for="username">Username:</label>
+        <label for="username">Itemname:</label>
         <input type="text" id="username" name="username" required><br>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="submit">
+        
     </form>
 
     <script>
@@ -25,8 +27,8 @@
             // Store the password as a cookie with a 7-day expiration (you can adjust the expiration time)
             const expirationDate = new Date();
             expirationDate.setDate(expirationDate.getDate() + 7);
-            setcookie(password, password, expirationDate);
-            setcookie(username, username, expirationDate);
+            setcookie("Itemname", username, expirationDate);
+            setcookie("Password", password, expirationDate);
 
             function setcookie(name, value, expirationDate) {
                 document.cookie = `${name}=${value};expires=${expirationDate.toUTCString()}`;

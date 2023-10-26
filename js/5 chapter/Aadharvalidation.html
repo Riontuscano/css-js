@@ -8,7 +8,7 @@
             const aadhaarNumber = document.getElementById("aadhaar").value;
 
             // Define regular expressions for valid Aadhaar card formats
-            const aadhaarRegex = /^\d{4}[.-]\d{4}[.-]\d{4}$/;
+            const aadhaarRegex = /^\d{4,4}[.-]\d{4,4}[.-]\d{4,5}$/;
 
             // Check if the entered Aadhaar number matches the regex pattern
             if (aadhaarRegex.test(aadhaarNumber)) {
@@ -17,7 +17,7 @@
                 document.getElementById("result").textContent = "Invalid Aadhaar Card Number";
             }
         }
-    </script>
+    </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 </head>
 <body>
     <h1>Aadhaar Card Validation</h1>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City</title>
+</head>
+<body>
+   <div class="imp">
+    // var imgelement=document.createElement("img");
+    // imgelement.src="/js/images/image1.jpg";
+    // imgelement.height=200
+    // imgelement.width=300
+    // var container=document.getElementById("image")
+    // container.appendChild(imgelement);
+    </div>
+    <h2>Select any city name: </h2>
+    <select name="city" id="id" onchange="show(this)">
+        <option value="default" disabled selected>Choose City</option>
+        <option value="1">Mumbai</option>
+        <option value="2">Delhi</option>
+        <option value="3">Goa</option>
+    </select>
+    <div id="image">
+        <img id="i1" src="img1.jpg" alt="default" height="400" width="00">
+    </div>
+    <p id="demo"></p>
+    <script>
+        function show(menu){
+            var item=menu.options[menu.selectedIndex].value;
+            if(item==1){
+                document.getElementById("i1").src = "/js/images/image1.jpg"    
+                document.getElementById("demo").textContent = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quaerat nisi natus iusto consectetur doloremque dicta et praesentium dolorum rem?"
+            }
+            if(item==2){
+                document.getElementById("i1").src = "/js/images/image2.jpg"    
+                document.getElementById("demo").textContent = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quaerat nisi natus iusto consectetur doloremque dicta et praesentium dolorum rem?"
+            }
+            if(item==3){
+                document.getElementById("i1").src = "/js/images/image3.jpg"
+                document.getElementById("demo").textContent = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quaerat nisi natus iusto consectetur doloremque dicta et praesentium dolorum rem?"
+            }
+        }
+    </script>
+</body>
+</html>

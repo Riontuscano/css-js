@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form name>
+        <label> Enter Name: </label>
+        <input type="text" id="name" /><br><br>
+        <input type="button" value="Set" onclick="setCookie()" />
+        <input type="button" value="Get" onclick="getCookie()" />
+        <p id="content"></p>
+        <script>
+            function setCookie() {
+                var expdate=new Date();
+                expdate.setDate(expdate.getDate()+(7));
+                value=document.getElementById("name").value;
+                document.cookie=`itemnames=${value};expires=${expdate.toUTCString()}`;
+                // getCookie();
+            }
+
+            function getCookie() {
+                var cookiearray = document.cookie;
+                cookiearray = cookiearray.split("=");
+                if (cookiearray[0] == "itemnames")
+                    document.getElementById("content").innerHTML = "Previous Data:" + cookiearray[1];
+                else
+                    document.getElementById("content").innerHTML = "Cookie not found"
+            }
+        </script>
+    </form>
+</body>
+
+</html>

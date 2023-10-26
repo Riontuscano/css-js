@@ -24,9 +24,9 @@
         function createCookie() {
             const cookieName = document.getElementById("cookieName").value;
             const cookieValue = document.getElementById("cookieValue").value;
-            expdate=new Date();
-            exp.setDate(expdate.getDate()+7)
-            document.cookie = `${cookieName}=${cookieValue}; expires=${exp.toUTCString()}`;
+            var expdate=new Date();
+            expdate.setDate(expdate.getDate()+7)
+            document.cookie = `${cookieName}=${cookieValue}; expires=${expdate.toUTCString()}`;
             
             document.getElementById("cookieOutput").textContent = `Cookie '${cookieName}' has been created.`;
         }

@@ -5,24 +5,8 @@
 </head>
 <body>
     
-   <button name="1" onclick="loadsite(this.name)">Flower</button>
-   <button name="2" onclick="loadsite(this.name)">Fruits</button>
-   <button name="3" onclick="loadsite(this.name)">Cities</button>
-   <script>
-    function loadsite(value){
-        // console.log(value);
-        // var data = parseInt(value);
-        if(value==1){
-            window.parent.frames["frame3"].location.href = "/js/images/flower.jpg";
-        }
-        if(value==2){
-            window.parent.frames["frame3"].location.href = "/js/images/fruit.jpg";
-        }
-        if(value==3){
-            window.parent.frames["frame3"].location.href = "/js/images/city.jpg";
-        }
-
-    }
-   </script>
+   <button onclick="window.parent.frame3.location.href = '/js/images/flower.jpg';">Flower</button>
+   <button onclick="window.parent.frame3.location.href = '/js/images/fruit.jpg';">Fruits</button>
+   <button onclick="window.parent.frame3.location.href = '/js/images/city.jpg';">Cities</button>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <script>
+        count = 0;
+        var arr1 = new Array();
+        var arr = [10, 2, 20, 30, 20, 50, 50, 60, 60];
+        for (i = 0; i < arr.length; i++) {
+            var duplicate = false;
+            for (j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j]) {
+                    duplicate = true;
+                }
+            }
+            if (duplicate) {
+                if (!arr1.includes(arr[i])) {
+                    arr1.push(arr[i]);
+                    count++;
+                }
+            }
+        }
+        document.write(`Duplicate count:${count}<br>`);
+        document.write(arr1.join(","));
+    </script>
+</body>
+
+</html>
