@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">
+
+    </p>
+    <button type="button" onclick="changefate(1)">Change Fate</button>
+    <script>
+        var string = "I will fail"
+        document.getElementById("p1").innerHTML = string
+
+        function changefate(count) {
+            status += count
+            if (status == 1) {
+                var string2 = string.replace("fail", "Pass")
+                document.getElementById("p1").innerHTML = string2
+                status += -1
+            }
+            if (status == 0) {
+                var string = "I will fail"
+                document.getElementById("p1").innerHTML = string
+                status += 0;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

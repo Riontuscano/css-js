@@ -46,24 +46,34 @@
         console.log('Preferred Language:', language);
         
         // navigator.geolocation.getCurrentPosition(): Retrieves the device's current geographic position (latitude and longitude) and returns it as a Position object.
-        navigator.geolocation.getCurrentPosition(position => {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
+        navigator.geolocation.getCurrentPosition(
+    position => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        if (latitude && longitude) {    
             console.log('Current Location:', `Latitude: ${latitude}, Longitude: ${longitude}`);
-        });
+        } else {
+            console.error("Location Not Available");
+        }
+    },
+    error => {
+        console.error("Error getting location:", error.message);
+    }
+);
+
 
         // navigator.getBattery(): Returns a promise that resolves to a BatteryManager object, which provides information about the battery status of the device (ifavailable).
-        // if ('getBattery' in navigator) {
-        //     navigator.getBattery()
-        //         .then(battery => {
-        //             console.log('Battery Level:', battery.level * 100 + '%');
-        //         })
-        //         .catch(error => {
-        //             console.error('Battery information not available:', error);
-        //         });
-        // } else {
-        //     console.error('Battery Status API is not supported in this browser.');
-        // }
+        if ('getBattery' in navigator) {
+            navigator.getBattery()
+                .then(battery => {
+                    console.log('Battery Level:', battery.level * 100 + '%');
+                })
+                .catch(error => {
+                    console.error('Battery information not available:', error);
+                });
+        } else {
+            console.error('Battery Status API is not supported in this browser.');
+        }
 
 
     </script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate mrks</title>
+</head>
+<body>
+    <script>
+        var student=[["Sumit",80],["Kalpesh",77],["Alamat",88],["Tejes",93],["Abhi",65]]
+        var avg=0;
+        for(var i=0;i<student.length;i++) {
+            avg+=student[i][1]
+        }
+        // console.log(avg);
+        // avg=Math.round(avg/student.length)
+        avg=Math.round(avg/student.length)
+        console.log(avg);
+        if(avg<60){
+            document.write("Grade E")
+        }
+        else if(avg<70){
+            document.write("Grade D")
+        }
+        else if(avg<80){
+            document.write("Grade C")
+        }
+        else if(avg<90){
+            document.write("Grade B")
+        }
+        else if(avg<100){
+            document.write("Grade A")
+        }
+    </script>
+</body>
+</html>

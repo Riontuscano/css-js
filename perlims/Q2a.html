@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetSET</title>
+</head>
+<body>
+    <script>
+        var person ={
+            fname:"",
+            lname:"",
+            get fullname(){
+                return this.fname+" "+this.lname
+            },
+            set fullname(cname){
+                this.fname= cname.split(" ")[0];
+                this.lname= cname.split(" ")[1];
+            }
+        }
+        student.fullname="Rion Tuscano";
+        document.write(student.fullname)
+    </script>
+</body>
+</html>
