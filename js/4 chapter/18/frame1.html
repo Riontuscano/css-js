@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frame 1</title>
+</head>
+<body>
+    <button onclick="loadImage()">Click here!</button>
+
+    <script>
+        function loadImage() {
+            // When the button is clicked, load an image in the second frame of the child window
+            window.parent.frames["frame2"].location.href = "/js/images/image1.jpg";
+        }
+    </script>
+</body>
+</html>

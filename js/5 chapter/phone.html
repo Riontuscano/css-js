@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    (nnn)-nnnn-nnnn OR nnn.nnnn.nnnn
+    <script>
+        var phoneno = prompt("Enter Phone No.");
+
+        var pattern1 = /^[(]\d{3,3}[)]-\d{4,4}-\d{4,4}$/;
+        var pattern2 = /^\d{3,3}.\d{4,4}.\d{4,4}$/;
+
+        if ( pattern1.test(phoneno) || pattern2.test(phoneno)) {
+            alert("Phone No. is Valid")
+        }
+        else
+            alert("Phone No. is Invalid")
+    </script>
+</body>
+
+</html>

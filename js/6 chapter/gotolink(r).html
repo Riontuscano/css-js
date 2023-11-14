@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    Select the page to navigate: <br>
+    <select onchange="navigate(this)">
+        <option  value="" disabled selected>---Select---</option> 
+        <option value="https://www.google.com">Google</option>
+        <option value="https://www.yahoo.com">Yahoo</option>
+        <option value="https://www.msbte.org.in">msbte</option>
+    </select>
+    <script>
+       
+        function navigate(menu) {
+            window.location.href = menu.options[menu.selectedIndex].value;
+        }
+    </script>
+</body>
+
+</html

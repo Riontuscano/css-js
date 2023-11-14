@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books Information</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Book 1</td>
+            <td>Author 1</td>
+            <td id="$20" onmouseover="showdiscount(this.id)"onmouseout="deletediscount(this.id)">$20</td>
+        </tr>
+        <tr>
+            <td>Book 2</td>
+            <td>Author 2</td>
+            <td id="$25" onmouseover="showdiscount(this.id)" onmouseout="deletediscount(this.id)">$25</td>
+        </tr>
+        <tr>
+            <td>Book 3</td>
+            <td>Author 3</td>
+            <td id="$18" onmouseover="showdiscount(this.id)" onmouseout="deletediscount(this.id)">$18</td>
+        </tr>
+        <tr>
+            <td>Book 4</td>
+            <td>Author 4</td>
+            <td id="$30" onmouseover="showdiscount(this.id)" onmouseout="deletediscount(this.id)">$30</td>
+        </tr>
+    </table>
+    <script>
+        function showdiscount(id){
+            document.getElementById(id).innerHTML=`Discount of 10% on ${id}`; 
+        }
+        function deletediscount(id){
+            document.getElementById(id).innerHTML=`${id}`; 
+        }
+    </script>
+</body>
+</html>

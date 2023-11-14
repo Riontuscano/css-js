@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call function</title>
+    <script>
+        var hrs=0
+        var min=0
+        var sec=0
+        function hello(){
+           setInterval(function(){
+            sec++;
+            document.getElementById("p1").innerHTML=`${hrs}:${min}:${sec}`;
+            if(sec===60){
+                sec=0;
+                min++;
+            }
+            if(min===60){
+                min=0;
+                hrs++;
+            }
+            const formattedTime = pad(hrs) + ":" + pad(min) + ":" + pad(sec)
+            document.getElementById("p1").innerText = formattedTime;
+        function pad(value) {
+            return value < 10 ? "0" + value : value;
+        }
+           },1000);
+        }
+       
+    </script>
+</head>
+<body onload="hello()">
+    <p id="p1"></p>
+</body>
+</html>

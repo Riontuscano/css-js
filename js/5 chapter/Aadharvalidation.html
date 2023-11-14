@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aadhaar Card Validation</title>
+    <script>
+        function validateAadhaar() {
+            // Get the Aadhaar card number from the input field
+            const aadhaarNumber = document.getElementById("aadhaar").value;
+
+            // Define regular expressions for valid Aadhaar card formats
+            const aadhaarRegex = /^\d{4,4}[.-]\d{4,4}[.-]\d{4,5}$/;
+
+            // Check if the entered Aadhaar number matches the regex pattern
+            if (aadhaarRegex.test(aadhaarNumber)) {
+                document.getElementById("result").textContent = "Valid Aadhaar Card Number";
+            } else {
+                document.getElementById("result").textContent = "Invalid Aadhaar Card Number";
+            }
+        }
+    </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+</head>
+<body>
+    <h1>Aadhaar Card Validation</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="aadhaar">Aadhaar Card Number:</label>
+        <input type="text" id="aadhaar" name="aadhaar" required>
+        <button type="button" onclick="validateAadhaar()">Validate</button><br><br>
+        <p id="result"></p>
+    </form>
+</body>
+</html>

@@ -6,17 +6,17 @@
     <title>Veggie and Fruits</title>
 </head>
 <body>
-    Fruit:<input type="radio" name="grp" id="fruits" onclick="sort()"><br>
-    Veggie:<input type="radio" name="grp" id="Veggie" onclick="sort()">
+    Fruit:<input type="radio" name="grp" id="fruits" onclick="sort(1)">
+    Veggie:<input type="radio" name="grp" id="Veggie" onclick="sort(2)"><br><br>
     <select name="sort" id="list">
 
     </select>
     <script>
-        function sort() {
-            if(document.getElementById("fruits").checked){
+        function sort(value) {
+            if(value===1){
                 temp="<option>Apple</option><br>"+"<option>Banana</option<br>"+"<option>Orange</option<br>"+"<option>strawberry</option<br>";
                 }
-            if(document.getElementById("Veggie").checked){
+            if(value===2){
                 temp="<option>Tomato</option<br>"+"<option>Patato</option<br>"+"<option>Carrot</option<br>"+"<option>Onion</option<br>";      
             }
             document.getElementById("list").innerHTML=temp;
@@ -25,3 +25,48 @@
     </script>
 </body>
 </html>
+<!-- <html>
+
+<head>
+    <title>HTML Form</title>
+    <script language="javascript" type="text/javascript">
+        function updateList(ElementValue) {
+            with (document.forms.myform) {
+                if (ElementValue == 1) {
+                    optionList[0].text = "Mango";
+                    optionList[0].value = 1;
+                    optionList[1].text = "Banana";
+                    optionList[1].value = 2;
+                    optionList[2].text = "Apple";
+                    optionList[2].value = 3;
+                }
+                if (ElementValue == 2) {
+                    optionList[0].text = "Potato";
+                    optionList[0].value = 1;
+                    optionList[1].text = "Cabbage";
+                    optionList[1].value = 2;
+                    optionList[2].text = "Onion";
+                    optionList[2].value = 3;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" action="" method="post">
+        <p><select name="optionList" size="2">
+                <option value=1>Mango</option>
+                <option value=2>Banana</option>
+                <option value=3>Apple</option>
+            </select>
+            <br>
+            <input type="radio" name="grp1" value=1 checked="true" onclick="updateList(this.value)">Fruits
+            <input type="radio" name="grp1" value=2 onclick="updateList(this.value)">Vegetables
+            <br>
+          
+        </p>
+    </form>
+</body>
+
+</html> -->

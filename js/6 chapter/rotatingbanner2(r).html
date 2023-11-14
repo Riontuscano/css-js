@@ -1,0 +1,27 @@
+<html>
+
+<body onload="startrotate()">
+    <a id="link">
+        <img src="/js/images/city.jpg" id="img" height="50%" width="50%">
+    </a>
+    <script>
+        var pics = 
+        [["/js/images/city.jpg", "https://www.instagram.com"],
+        ["/js/images/flower.jpg", "https://www.google.com"],
+        ["/js/images/fruit.jpg", "https://www.snapchat.com"]];
+        var count=0;
+        function rotate() {
+            count++; 
+            if (count > pics.length - 1) {
+                count = 0;
+            }
+            document.getElementById("img").src = pics[count][0];
+            document.getElementById("link").href = pics[count][1];   
+        }
+    function startrotate() {
+        rotate();
+        setInterval(rotate, 2000)
+    }
+    </script>
+</body>
+</html>

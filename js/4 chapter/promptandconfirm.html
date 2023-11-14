@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        prompt:
+
+        Purpose: prompt is used to get input from the user in the form of a text input field. It typically displays a message or a question to the user and allows them to enter text.
+    </p>
+    <button onclick="callprompt()">Call Prompt</button>
+    <p>confirm() Method:
+        
+        The confirm() method displays a dialog box with a message and two buttons: "OK" and "Cancel." It allows the user to confirm or cancel an action. It returns true if the user clicks "OK" and false if the user clicks "Cancel."</p>
+        <button onclick="callconfirm()">Call Confirm</button>
+        <script>
+        function callconfirm() {
+
+            let userConfirmed = confirm("Do you want to proceed with this action?");
+            if (userConfirmed) {
+                alert("You confirmed the action.");
+            } else {
+                alert("You canceled the action.");
+            }
+        }
+        function callprompt() {
+
+            const userName = prompt('Please enter your name:', 'John Doe');
+            
+            if (userName !== null) {
+                alert(`Hello, ${userName}!`);
+            } else {
+                alert('You canceled the prompt.');
+            }
+        }
+
+        </script>
+</body>
+</html>

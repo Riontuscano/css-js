@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> The window.open() method is used to open a new browser window or tab in JavaScript. It allows you to specify the URL of the new page,  the window's name, and various other parameters, such as window size, position, and whether the window should have certain features like a toolbar, status bar, or scrollbars. <br>
+         url (optional): The URL of the page to open in the new window. If omitted, an empty window is created.
+        name (optional): The name of the new window. If a window with the same name already exists, it will be reused.
+        features (optional): A string that specifies the window's features (e.g., size, position, toolbars, status bars, etc.).
+        replace (optional): A boolean that specifies whether the new window should replace the current history entry.</p>
+    <script>// Open a new window with a specific URL and name
+        const newWindow = window.open("https://www.example.com", "myWindow");
+        
+        // Customize the appearance of the new window
+        const features = "width=400,height=300,toolbar=no,status=no,location=no,scrollbars=yes";
+        const customWindow = window.open("https://www.example.com", "customWindow", features);
+        
+        // Replace the current page's history entry with a new URL
+        const replaceWindow = window.open("https://www.newpage.com", "_self");
+        </script>
+        <!-- window.open("https://www.example.com", "ExampleWindow", "left=100, top=100, width=800, height=600"); -->
+
+</body>
+</html>

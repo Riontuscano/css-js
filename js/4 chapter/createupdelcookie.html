@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookies Example</title>
+</head>
+<body>
+    <h1>Manage Cookies</h1>
+    
+    <label for="cookieName">Cookie Name:</label>
+    <input type="text" id="cookieName"><br>
+
+    <label for="cookieValue">Cookie Value:</label>
+    <input type="text" id="cookieValue"><br>
+
+    <button onclick="createCookie()">Create Cookie</button>
+    <button onclick="readCookie()">Read Cookie</button>
+    <button onclick="updateCookie()">Update Cookie</button>
+    <button onclick="deleteCookie()">Delete Cookie</button>
+
+    <div id="cookieOutput"></div>
+
+    <script>
+        // Function to create a cookie
+        function createCookie() {
+            const cookieName = document.getElementById("cookieName").value;
+            const cookieValue = document.getElementById("cookieValue").value;
+            var expdate=new Date();
+            expdate.setDate(expdate.getDate()+7)
+            document.cookie = `${cookieName}=${cookieValue}; expires=${expdate.toUTCString()}`;
+            
+            document.getElementById("cookieOutput").textContent = `Cookie '${cookieName}' has been created.`;
+        }
+
+        // Function to read a cookie
+        function readCookie() {
+            const cookieName = document.getElementById("cookieName").value;
+            const cookies = document.cookie.split(';');
+            let cookieValue = "";
+            
+            for (const cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === cookieName) {
+                    cookieValue = value;
+                    break;
+                }
+            }
+            
+            if (cookieValue !== "") {
+                document.getElementById("cookieOutput").textContent = `Cookie '${cookieName}' has value: ${cookieValue}`;
+            } else {
+                document.getElementById("cookieOutput").textContent = `Cookie '${cookieName}' not found.`;
+            }
+        }
+
+        // Function to update a cookie
+        function updateCookie() {
+            const cookieName = document.getElementById("cookieName").value;
+            const cookieValue = document.getElementById("cookieValue").value;
+            
+            document.cookie = `${cookieName}=${cookieValue}`;
+            
+            document.getElementById("cookieOutput").textContent = `Cookie '${cookieName}' has been updated.`;
+        }
+
+        // Function to delete a cookie
+        function deleteCookie() {
+            const cookieName = document.getElementById("cookieName").value;
+            
+            document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+            
+            document.getElementById("cookieOutput").textContent = `Cookie '${cookieName}' has been deleted.`;
+        }
+    </script>
+</body>
+</html>

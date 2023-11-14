@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    Hiding Your Source Code:
+    Hiding your source code involves obfuscating or minifying your HTML, CSS, and JavaScript files to make them less human-readable. While this can deter casual users from viewing your source code, it won't prevent determined users from accessing it.
+    
+    Disabling the Right Mouse Button:
+    Disabling the right mouse button can be done using JavaScript to prevent users from right-clicking on your webpage. You can display a custom message or take other actions when someone tries to right-click. However, this method is not foolproof and can be bypassed by users who disable JavaScript or use keyboard shortcuts.
+    
+    Hiding JavaScript:
+    You can minimize the exposure of sensitive JavaScript code by using server-side scripts to handle secure operations or by encapsulating your JavaScript code within modules and making use of closures. This helps protect your code from casual inspection but may not provide complete security.
+    
+    Concealing E-mail Addresses:
+    To protect email addresses from web scrapers and spammers, you can encode them using JavaScript, generate email links dynamically, or use contact forms to hide email addresses. This approach helps prevent email harvesting, but it may inconvenience users who want to copy and paste the address.
+<head>
+    <title>Disable Right Click</title>
+</head>
+
+<body oncontextmenu="return false;">
+    <script>
+        // Show a custom message when someone right-clicks
+        window.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert('Right-clicking is disabled.');
+        });
+    </script>
+</body>
+
+</html>

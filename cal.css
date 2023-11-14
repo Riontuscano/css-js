@@ -30,6 +30,7 @@ body {
     background-color: #8b8888;
 }
 h1{
+    
     font-weight: 900;
     position: relative;
     justify-items: center;
@@ -49,6 +50,7 @@ h1::after{
 }
 
 h1:hover::after{
+    /* height: 10vh; */
     content:"Calculator";
     width: 100%;
 

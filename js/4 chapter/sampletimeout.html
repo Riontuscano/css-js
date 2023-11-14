@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>setTimeout Example</title>
+</head>
+
+<body>
+    <p id="message">This message will change in a few seconds.</p>
+
+    <script>
+        function changeMessage() {
+            document.getElementById("message").textContent = "Message changed!";
+        }
+        setTimeout(changeMessage, 3000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #slideshow {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        #prevBtn,
+        #nextBtn {
+            /* position: absolute; */
+            /* top: 100%; */
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+        <img id="img" src="/js/images/city.jpg" width="70%" height="50%" >
+
+        <button id="prevBtn" onclick="showSlide(-1)">Previous</button>
+        <button id="nextBtn" onclick="showSlide(1)">Next</button>
+  
+
+    <script>
+        const pics = ["/js/images/city.jpg", "/js/images/fruit.jpg", "/js/images/flower.jpg","/js/images/image1.jpg","/js/images/image2.jpg"]
+        var count = 0;
+        demoimg= document.getElementById("img");
+        function showSlide(status) {
+            count = count + status;
+            if (count > pics.length - 1) 
+                count = 0;
+            if (count < 0) 
+                count = pics.length - 1;
+           demoimg.setAttribute("src", pics[count]);
+        }
+    </script>
+</body>
+
+</html>

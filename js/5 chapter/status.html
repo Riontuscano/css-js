@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modify Status Bar</title>
+</head>
+<body>
+    <a href="#" onmouseover="changeStatusBar('MSBTE');" onmouseout="changeStatusBar(' ');">
+        Hover over this link
+    </a>
+
+    <script>
+        function changeStatusBar(text) {
+            // console.log(text);
+            window.status = text;
+        }
+    </script>
+</body>
+</html>

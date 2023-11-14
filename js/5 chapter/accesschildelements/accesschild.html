@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parent Window</title>
+</head>
+<body>
+    <button onclick="openChildWindow()">Open Child Window</button>
+    <button onclick="accessChildElement()">Access Child Window</button>
+   
+    <script>
+        let childWindow;
+
+        function openChildWindow() {
+            // Open a child window
+            childWindow = window.open('child.html', 'ChildWindow', 'width=400,height=200');
+        }
+
+        function accessChildElement() {
+            if (childWindow) {
+                const childElement = childWindow.document.getElementById('childElementId');
+                if (childElement) {
+                    // Access and manipulate the child element
+                    childElement.textContent = 'Element in Child Window Modified!';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

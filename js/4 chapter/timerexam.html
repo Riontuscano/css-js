@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <p> function: A callback function or code to execute repeatedly at a specified interval.
+        milliseconds: The interval in milliseconds between each execution.
+        param1, param2, ... (optional): Parameters to pass to the function when it's executed.
+Explanation:
+The setInterval() method is used to repeatedly execute a specified function or code at regular intervals, as defined by the milliseconds parameter. It allows you to create a continuous or periodic event, such as updating the content on a webpage or running a function at fixed intervals.</p>
+<p>function: A callback function or code to execute after a specified delay.
+    milliseconds: The delay in milliseconds before the function is executed.
+    param1, param2, ... (optional): Parameters to pass to the function when it's executed.
+    Explanation:
+    The setTimeout() method is used to execute a specified function or code after a defined delay (in milliseconds). It allows you to schedule a one-time event, such as running a function, after a specified time interval. The provided function is executed only once after the specified delay.</p><br><br>
+    <div id="showtime">
+
+    </div>
+    <script>
+    function logTime() {
+        time=(new Date().toLocaleTimeString());
+        document.getElementById("showtime").textContent=time
+    }
+    setInterval(logTime, 1000);
+
+    function sayHello(name) {
+    alert(`Hello, ${name}!`);
+    }
+
+    setTimeout(sayHello, 2000, "John");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!-- ou can identify the running browser in JavaScript by accessing the navigator object, which provides information about the user's web browser and the platform it's running on. Specifically, you can use the navigator.userAgent property to get information about the user agent string, which often contains details about the browser. -->
+
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>browser</title>
+</head>
+<center>
+    <h2>To identify the current browser go to console.log</h2>
+</center>
+
+<body>
+    <script>
+        const userAgent = navigator.userAgent;
+        // console.log('User Agent:', userAgent);
+        if (userAgent.includes("Chrome")) {
+            console.log("You are using Google Chrome.");
+        } else if (userAgent.includes("Firefox")) {
+            console.log("You are using Mozilla Firefox.");
+        } else if (userAgent.includes("Safari")) {
+            console.log("You are using Apple Safari.");
+        } else if (userAgent.includes("Edge")) {
+            console.log("You are using Microsoft Edge.");
+        } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+            console.log("You are using Opera.");
+        } else {
+            console.log("The browser could not be identified.");
+        }
+        // navigator.appName:Returns the name of the browser.
+        const appName = navigator.appName;
+        console.log('Browser Name:', appName);
+        //  navigator.appVersion:Returns the version of the browser.
+        const appVersion = navigator.appVersion;
+        console.log('Browser Version:', appVersion);
+
+        // navigator.platform: Returns the platform or operating system on which the browser is running.
+        const platform = navigator.platform;
+        console.log('Operating System:', platform);
+        // navigator.language: Returns the preferred language of the user's browser.
+        const language = navigator.language;
+        console.log('Preferred Language:', language);
+        
+        // navigator.geolocation.getCurrentPosition(): Retrieves the device's current geographic position (latitude and longitude) and returns it as a Position object.
+        navigator.geolocation.getCurrentPosition(
+    position => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        if (latitude && longitude) {    
+            console.log('Current Location:', `Latitude: ${latitude}, Longitude: ${longitude}`);
+        } else {
+            console.error("Location Not Available");
+        }
+    },
+    error => {
+        console.error("Error getting location:", error.message);
+    }
+);
+
+
+        // navigator.getBattery(): Returns a promise that resolves to a BatteryManager object, which provides information about the battery status of the device (ifavailable).
+        if ('getBattery' in navigator) {
+            navigator.getBattery()
+                .then(battery => {
+                    console.log('Battery Level:', battery.level * 100 + '%');
+                })
+                .catch(error => {
+                    console.error('Battery information not available:', error);
+                });
+        } else {
+            console.error('Battery Status API is not supported in this browser.');
+        }
+
+
+    </script>
+</body>
+
+</html>

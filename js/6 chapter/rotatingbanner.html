@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .banner {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .banner a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+    </style>
+</head>
+<body onload="startRotation()">
+    <div class="banner">
+        <a href="https://www.example.com">
+            <img src="image1.jpg" alt="Banner 1">
+        </a>
+        <a href="https://www.sample.com">
+            <img src="image2.jpg" alt="Banner 2">
+        </a>
+        <a href="https://www.demo.com">
+            <img src="image3.jpg" alt="Banner 3">
+        </a>
+    </div>
+    <script>
+        let currentBanner = 0;
+        const bannerImages = document.querySelectorAll(".banner img"); 
+
+        function rotateBanner() {
+            bannerImages[currentBanner].style.display = "none";
+            currentBanner = (currentBanner + 1) % bannerImages.length;
+            bannerImages[currentBanner].style.display = "block";
+        }
+
+        function startRotation() {
+            rotateBanner();
+            setInterval(rotateBanner, 3000);
+        }
+
+        
+    </script>
+</body>
+</html>

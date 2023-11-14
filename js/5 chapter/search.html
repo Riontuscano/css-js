@@ -1,0 +1,58 @@
+<!-- Search -->
+<!-- In JavaScript, the search() method is used with regular expressions to search for a specified pattern within a string. It returns the index of the first occurrence of the pattern in the string, or -1 if no match is found. 
+Syntax:-
+string.search(regexp)-->
+<!-- Match -->
+<!-- This method is used to search for a specified pattern within a string and returns an array of all matched substrings. If no matches are found, it returns null. -->
+<!-- test -->
+<!-- This method checks whether a specified pattern exists within a string and returns true if a match is found or false if no match is found. -->
+
+<!-- exec -->
+<!-- This method is used to search for a specified pattern within a string. It returns an array containing details about the first match, including the matched text, index, and capture groups. If no match is found, it returns null. You can also use it in a loop to find all matches in a string. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const text = "Alice and Bob are friends. Alice likes Bob.Alice and Bob are just friends";
+    const pattern = /Alice/g;
+    let result;
+    while ((result = pattern.exec(text)) !== null) {
+      console.log(`Match: ${result[0]}, Index: ${result.index}`);
+    }
+
+
+    const text1 = "The quick brown fox jumps over the lazy dog.";
+    const pattern1 = /the/gi;
+    const result1 = text1.match(pattern1);
+    console.log(result1); // Output: ["The", "the"]
+
+
+
+    const text2 = "Hello, World! This is an example text with some words.";
+    const pattern2 = /example/;
+    const result2 = text2.search(pattern2);
+    if (result2 !== -1) {
+      console.log(`Pattern found at index ${result2}`);
+    } else {
+      console.log("Pattern not found.");
+    }
+
+
+
+    const text3 = "The sun is shining.";
+    const pattern3 = /moon/;
+    const result3 = pattern3.test(text3);
+    console.log(result3); // Output: false
+
+
+  </script>
+</body>
+
+</html>

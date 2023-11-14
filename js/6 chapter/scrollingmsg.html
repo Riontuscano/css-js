@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script>
+        msg = "This is an example of scrolling message";
+        spacer = "............";
+        pos = 0;
+        function ScrollMessage() {
+          document.getElementById("demo").textContent=msg.substring(pos, msg.length) + spacer + msg.substring(0, pos);
+            pos++;
+            if (pos > msg.length)
+                pos = 0;
+        //    window.setTimeout("ScrollMessage()",100); 
+           }
+        setInterval(ScrollMessage, 100);
+        // ScrollMessage();
+    </script>
+</head>
+
+<body>
+    <p>Scrolling Message</p><br><br>
+    <p id="demo"></p>
+</body>
+
+</html>

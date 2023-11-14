@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            
+            // Name Validation  
+            if (name.trim() === "") {
+                alert("Name is required.");
+                return;
+            }
+
+            // Email Validation using regex
+            const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}$/;
+            if (!emailRegex.test(email)) {
+                alert("Invalid email address.");
+                return;
+            }
+
+            // If both name and email are valid, you can proceed with form submission
+            alert("Form submitted successfully!");
+            document.getElementById("myForm").reset(); // Clear the form
+        }
+    </script>
+</body>
+</html>
