@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Context Menu Example</title>
+  <style>
+    /* Styling for the context menu */
+    .context-menu {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+    
+    /* Styling for context menu items */
+    .context-menu-item {
+      padding: 8px 12px;
+      cursor:pointer;
+    }
+    .context-menu-item:hover{
+        background-color:   #a8a5a5;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Example element with a context menu -->
+<div id="contextMenuTarget" style="width: 200px; height: 100px; background-color: #eee; padding: 10px;">
+  Right-click me for options
+</div>
+
+<!-- Context menu structure -->
+<div id="contextMenu" class="context-menu">
+  <div class="context-menu-item" onclick="handleContextMenuAction('action1')">Action 1</div>
+  <div class="context-menu-item" onclick="handleContextMenuAction('action2')">Action 2</div>
+  <div class="context-menu-item" onclick="handleContextMenuAction('action3')">Action 3</div>
+</div>
+
+<script>
+  // Function to show the context menu
+  function showContextMenu(x, y) {
+    var contextMenu = document.getElementById('contextMenu');
+    contextMenu.style.display = 'block';
+    contextMenu.style.left = x + 'px';
+    contextMenu.style.top = y + 'px';
+  }
+
+  // Function to hide the context menu
+  function hideContextMenu() {
+    var contextMenu = document.getElementById('contextMenu');
+    contextMenu.style.display = 'none';
+  }
+
+  // Function to handle context menu actions
+  function handleContextMenuAction(action) {
+    alert('Selected action: ' + action);
+    hideContextMenu();
+  }
+
+  // Event listener for right-click on the target element
+  var contextMenuTarget = document.getElementById('contextMenuTarget');
+  contextMenuTarget.addEventListener('contextmenu', function (event) {
+    event.preventDefault(); // Prevent the default browser context menu
+    showContextMenu(event.pageX, event.pageY);
+  });
+
+  // Event listener to hide the context menu when clicking outside of it
+  document.addEventListener('click', function () {
+    hideContextMenu();
+  });
+</script>
+
+</body>
+</html>

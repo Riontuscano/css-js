@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <script>
+        let arr = ["scale", "happy", "strength", "peace", "happy", "happy"];
+        function removeDuplicates(arr) {
+            let unique = [];
+            for (i = 0; i < arr.length; i++) {
+                if (unique.indexOf(arr[i]) !== -1) {
+                    unique.push(arr[i]);
+                }
+            }
+            return unique;
+        }
+        document.write(removeDuplicates(arr));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var d = new Date();
+        var currentDay = (d.getDate() > 10) ? d.getDate() : '0' + d.getDate();
+        var currentMonth = (d.getMonth() + 1 > 10) ? d.getMonth() + 1 : '0' + d.getMonth() + 1;
+        // var currentMonth = d.getMonth()+1;
+        var currentYear = d.getFullYear();
+
+        document.write(currentDay + '/' +currentMonth + '/' + currentYear)
+    </script>
+</body>
+
+</html>

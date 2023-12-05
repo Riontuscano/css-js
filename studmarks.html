@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <script>
+        var students = [["Amit", 70], ["Sumit", 78], ["Abhishek", 71],];
+        var total = 0;
+        for (var i = 0; i < students.length; i++) {
+            total += students[i][1];
+            for (var j = i + 1; j < students.length; j++) {
+                if (students[i][1] > students[j][1]) {
+                    a = students[i];
+                    students[i] = students[j];
+                    students[j] = a
+                }
+            }
+        }
+        document.write("Average grade: " + total / students.length);
+        document.write("<br><br>");
+        for (i = 0; i < students.length; ++i) {
+            document.write(students[i] + "<br>")
+        }
+    </script>
+</body>
+
+</html>

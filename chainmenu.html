@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowil</title>
+</head>
+
+<body>
+    <select id="country" onchange="change(this.value)">
+        <option value="" disabled selected>Select The Country</option>
+        <option value="india">India</option>
+        <option value="Usa">Usa</option>
+    </select>
+    <select id="city" onchange="city(this.value)">
+    </select>
+    <select id="food">
+    </select>
+    <script>
+        function change(val) {
+            if (val == "india") {
+                document.getElementById("city").innerHTML = "<option value=>Select the City</option ><option value='mumbai'>mumbai</option><option value='delhi'>delhi</option><option value='benglaru'>benglaru</option>"
+            }
+            if (val == "Usa") {
+                document.getElementById("city").innerHTML = "<option value = 'Alaska' > Alaska</option ><option value='California'>California</option><option value='Colorado'>Colorado</option>"
+            }
+        }
+        function city(newval) {
+            if (newval == "mumbai") {
+                document.getElementById("food").innerHTML = "<option value = 'vadapav' > vadapav</option ><option value='dahi chaat'>dahi chaat</option><option value='pani puri'>panipuri</option>"
+            }
+            if (newval == "delhi") {
+                document.getElementById("food").innerHTML =
+                    "<option>Momos</option><option>Chole Kulcha</option><option >Rajma Chawal</option>"
+            }
+            if (newval == "benglaru") {
+                document.getElementById("food").innerHTML = "<option>Mendu Wada</option ><option>Idli</option><option >Dosa</option>"
+            }
+            if (newval == "Alaska") {
+                document.getElementById("food").innerHTML = "<option>Cheese Burger </option ><option>Ham burger</option><option >mutton Burger</option>"
+            }
+            if (newval == "California") {
+                document.getElementById("food").innerHTML =
+                    "<option>Fish</option><option>Chicken</option><option>Meat</option>"
+            }
+            if (newval == "Colorado") {
+                document.getElementById("food").innerHTML = "<option>Spicy chips</option ><option>Salted Chips</option><option >Peri peri chips</option>"
+            }
+        }
+    </script>
+</body>
+
+</html

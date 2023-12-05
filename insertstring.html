@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    function insertString(originalString, insertion, position) {
+            if (position < 0 || position > originalString.length) {
+                console.error("Invalid position");
+                return originalString;
+            }
+
+            // Insert the substring at the specified position
+            const modifiedString =
+                originalString.substring(0, position) +
+                insertion +
+                originalString.substring(position);
+
+            return modifiedString;
+        }
+
+        // Example usage:
+        const originalText = "Hello, World!";
+        const newText = insertString(originalText, "Awesome ", 7);
+
+        console.log(newText); // Output: Hello, Awesome World!
+    </script>
+</body>
+
+</html>
