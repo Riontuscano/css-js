@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var marks = [80, 77, 88, 93, 65]
+        sum = 0
+        for (i = 0; i < marks.length; i++) {
+            sum = sum + marks[i]
+        }
+        avg = sum / marks.length
+        if (avg < 60) {
+            document.write(" E Grade")
+        } 
+        else if (avg < 70) {
+            document.write("  D Grade")
+        }
+        else if (avg < 80) {
+            document.write(" C Grade")
+        }
+        else if (avg < 90) {
+            document.write(" B Grade")
+        }
+        else if (avg < 100) {
+            document.write(" A Grade")
+
+        }
+
+        document.write("<br>"+"Grade: "+avg)
+
+    </script>
+
+</body>
+
+</html>
