@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>
+let arr = ["scale", "happy", "strength", "peace", "happy", "happy"];
+
+function findDuplicates(arr) {
+  let duplicates = [];
+  let unique = [];
+//for removing dup values 
+  for (let i = 0; i < arr.length; i++) {
+    if (unique.indexOf(arr[i]) === -1) {
+      unique.push(arr[i]);
+    }
+// for displaying dup values 
+    else {
+      if (duplicates.indexOf(arr[i]) === -1) {
+        duplicates.push(arr[i]);
+      }
+    }
+  }
+// change the code accordingly
+  return duplicates;
+}
+
+document.write(findDuplicates(arr));
+</script>
+</body>
+</html>
