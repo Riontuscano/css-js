@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var username = prompt("Enter Username");
+        var aadhaar = prompt("Enter Aadhaar No.");
+        var pattern1 = /^\d{4,4}[-]\d{4,4}[-]\d{4,4}[-]\d{4,4}$/;
+        //format NNNN-NNNN-NNNN-NNNN
+        var pattern2 = /^\d{4,4}[.]\d{4,4}[.]\d{4,4}[.]\d{4,4}$/;
+        //format NNNN.NNNN.NNNN.NNNN
+        // \d matches any digit, {4,4} specifies minimum and max length,
+        // ^ specifies match the beginning, $ specifies match the end
+        var result = pattern1.test(aadhaar) || pattern2.test(aadhaar)
+        if (result) {
+            alert("Aadhar No. is Valid")
+        }
+        else
+            alert("Aadhar No. is Invalid")
+    </script>
+</body>
+
+</html>

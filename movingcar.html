@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #car {
+      position: relative;
+      left: 0;
+      top: 50px;
+      width: 50px;
+      height: 30px;
+      background-color: #4285f4; /* Google blue color */
+      border-radius: 5px;
+      transition: left 0.5s ease-in-out;
+    }
+  </style>
+  <title>Moving Car Animation</title>
+</head>
+<body>
+  <div id="car"></div>
+
+  <script>
+    // Variables to store the car element and its current position
+    const car = document.getElementById('car');
+    let carPosition = 0;
+
+    // Function to move the car to the right
+    function moveCar() {
+      carPosition += 10; // Adjust the speed by changing this value
+      car.style.left = carPosition + 'px';
+        if(carPosition==1720){
+            car.style.right = carPosition + 'px';
+        }
+      // Schedule the next move after a delay
+      setTimeout(moveCar, 50);
+    }
+    // var taskbarHeight = parseInt(screen.height,10) - parseInt(screen.availHeight,10) + " pixels";
+    // console.log(taskbarHeight);
+    // Start the animation when the page loads
+    moveCar();
+
+    // Uncomment the following lines if you want to stop the animation after a certain time (e.g., 3000 milliseconds)
+    // setTimeout(() => {
+    //   clearTimeout(moveCar);
+    // }, 3000);
+  </script>
+</body>
+</html>

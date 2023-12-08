@@ -7,6 +7,11 @@
 </head>
 <body>
      <center><h1> my first frame </h1></center>
-    
+    <button onclick="go()"> Go</button>
+    <script>
+        function go() {
+            window.parent.frames["2"].location.href="/js/images/image1.jpg;" 
+        }
+    </script>
 </body>
 </html>
